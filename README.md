@@ -46,3 +46,27 @@ Synthesized using Xilinx Vivado targeting an **AMD/Xilinx Artix-7 FPGA (Part: xc
 ├── ui_controller.py          # Python/Pygame Graphical User Interface
 ├── demo.gif                   # Animation showcase of the Pygame interface
 └── README.md                  # Project Documentation
+
+## 🛠️ Getting Started
+
+### Prerequisites
+*   Xilinx Vivado
+*   Python 3.x
+*   Pygame (`pip install pygame`)
+
+### Running the Hardware-in-the-Loop Simulation
+
+Because the hardware simulation engine and the Python frontend run as separate processes, you must start the Vivado simulation first so it can process the interactive UI events.
+
+#### Step 1: Start the Vivado Hardware Engine
+1. Open your project in Xilinx Vivado.
+2. In the **Sources** panel, expand **Simulation Sources**, right-click `game_of_life_pipeline_tb`, and select **Set as Top**.
+3. In the left-hand Flow Navigator panel, click **Run Simulation** -> **Run Behavioral Simulation**.
+4. Once the waveform window opens, look at the bottom of the Vivado window for the **Tcl Console** tab.
+5. In the console command line, type `run -all` and press **Enter**. *Note: This tells the simulator to run indefinitely, allowing it to actively poll the communication files for inputs from the UI.*
+
+#### Step 2: Start the Pygame Interface
+1. Open a terminal or command prompt in your project folder.
+2. Run the Python interface script:
+   ```bash
+   python ui_controller.py
