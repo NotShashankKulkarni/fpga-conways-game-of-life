@@ -45,8 +45,8 @@ Synthesized using Xilinx Vivado targeting an **AMD/Xilinx Artix-7 FPGA (Part: xc
 ├── game_of_life_tb_verify.v   # Hardware-in-the-loop Simulation Testbench
 ├── ui_controller.py          # Python/Pygame Graphical User Interface
 ├── demo.gif                   # Animation showcase of the Pygame interface
-└── README.md                  # Project Documentation
-
+└── README.md                  # Project Documentatio
+```
 ## 🛠️ Getting Started
 
 ### Prerequisites
